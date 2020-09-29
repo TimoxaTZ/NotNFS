@@ -5,17 +5,20 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.tricksless.notnfs.model.Car;
 
 
 public class ActiveScreen implements Screen {
 
-    private Texture texture;
+    private Texture carTexture;
     private SpriteBatch batch;
+    private Car car;
 
     @Override
     public void show() {
         batch = new SpriteBatch();
-        texture = new Texture(Gdx.files.internal("Camaro.png"));
+        carTexture = new Texture(Gdx.files.internal("Camaro.png"));
+        car = new Car(carTexture,30,0,340,780);
     }
 
     @Override
@@ -24,7 +27,7 @@ public class ActiveScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         batch.begin();
-        batch.draw(texture,50,0);
+        car.draw(batch);
         batch.end();
     }
 
@@ -51,6 +54,6 @@ public class ActiveScreen implements Screen {
     @Override
     public void dispose() {
         batch.dispose();
-        texture.dispose();
+        carTexture.dispose();
     }
 }
