@@ -18,7 +18,7 @@ public class ActiveScreen implements Screen {
     public void show() {
         batch = new SpriteBatch();
         carTexture = new Texture(Gdx.files.internal("Camaro.png"));
-        car = new Car(carTexture,30,0,340,780);
+        car = new Car(carTexture,50,0,340,780);
     }
 
     @Override
