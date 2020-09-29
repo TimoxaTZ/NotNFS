@@ -1,8 +1,8 @@
-package com.tricksless.cardrive;
+package com.tricksless.notnfs;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
-import com.tricksless.cardrive.view.ActiveScreen;
+import com.tricksless.notnfs.view.ActiveScreen;
 
 public class Main extends Game {
 

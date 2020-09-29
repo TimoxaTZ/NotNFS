@@ -1,4 +1,4 @@
-package com.tricksless.cardrive.model;
+package com.tricksless.notnfs.model;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
